@@ -1,0 +1,690 @@
+[
+  {
+    "name": "Graphics Cards",
+    "id": "1",
+    "items": [
+      {
+        "name": "NVIDIA GeForce RTX 3090",
+        "brand": "NVIDIA",
+        "itemId": "item01",
+        "price": "$560",
+        "series": "GeForce RTX 30 Series",
+        "model": "RTX 3090",
+        "description": "Powerful GPU for 4K gaming and ray tracing.",
+        "memorySize": "24GB GDDR6X",
+        "coreClock": "1695MHz",
+        "boostClock": "1860MHz",
+        "memoryType": "GDDR6X",
+        "img": "https://www.laptopsdirect.ie/Images/TUF-RTX4090-24G-GAMING_1_Classic.jpg?v=5",
+        "memoryBus": "384-bit",
+        "tdp": "350W",
+        "directXSupport": "12",
+        "rayTracingCores": 328,
+        "tensorCores": 328,
+        "technicalInfo": {
+          "compatibleProducts": "PCI Express 4.0",
+          "warranty": "3 Year"
+        }
+      },
+      {
+        "name": "AMD Radeon RX 6900 XT",
+        "brand": "AMD",
+        "itemId": "item02",
+        "price": "$560",
+        "series": "Radeon RX 6000 Series",
+        "model": "RX 6900 XT",
+        "description": "High-performance graphics card for gaming and rendering.",
+        "memorySize": "16GB GDDR6",
+        "coreClock": "2015MHz",
+        "boostClock": "2250MHz",
+        "img": "https://www.pcstudio.in/wp-content/uploads/2023/09/Asus-Tuf-Gaming-Radeon-Rx-7700-Xt-Oc-Edition-12Gb-Gddr6-Graphics-Card-1.jpg",
+        "memoryType": "GDDR6",
+        "memoryBus": "256-bit",
+        "tdp": "300W",
+        "directXSupport": "12",
+        "rayTracingCores": 80,
+        "tensorCores": 80,
+        "technicalInfo": {
+          "compatibleProducts": "PCI Express 4.0",
+          "warranty": "2 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Memory (RAM)",
+    "id": "2",
+    "items": [
+      {
+        "name": "Corsair Vengeance LPX 16GB DDR4",
+        "brand": "Corsair",
+        "itemId": "item03",
+        "price": "$560",
+        "series": "Vengeance LPX",
+        "capacity": "16GB (2 x 8GB)",
+        "type": "DDR4",
+        "speed": "3200MHz",
+        "casLatency": "16",
+        "voltage": "1.35V",
+        "color": "Black",
+        "img": "https://5.imimg.com/data5/CY/FF/MY-12308096/computer-ram.jpg",
+        "heatSpreader": "Yes",
+        "technicalInfo": {
+          "memoryChannel": 2,
+          "eccMemorySupported": "No",
+          "warranty": "Lifetime"
+        }
+      },
+      {
+        "name": "G.Skill Ripjaws V 32GB DDR4",
+        "brand": "G.Skill",
+        "itemId": "item04",
+        "price": "$560",
+        "series": "Ripjaws V",
+        "capacity": "32GB (2 x 16GB)",
+        "type": "DDR4",
+        "speed": "3600MHz",
+        "casLatency": "16",
+        "voltage": "1.35V",
+        "color": "Red",
+        "img": "https://ecomputernotes.com/images/RAM.png",
+        "heatSpreader": "Yes",
+        "technicalInfo": {
+          "memoryChannel": 2,
+          "eccMemorySupported": "No",
+          "warranty": "Lifetime"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Storage",
+    "id": "3",
+    "items": [
+      {
+        "name": "Samsung 970 EVO 1TB NVMe SSD",
+        "brand": "Samsung",
+        "itemId": "item05",
+        "price": "$560",
+        "series": "970 EVO",
+        "capacity": "1TB",
+        "interface": "NVMe",
+        "formFactor": "M.2",
+        "img": "https://media.geeksforgeeks.org/wp-content/uploads/20230418162002/Storage-Devices-2-768.webp",
+        "readSpeed": "3500MB/s",
+        "writeSpeed": "2500MB/s",
+        "technicalInfo": {
+          "endurance": "600TBW",
+          "warranty": "5 Year"
+        }
+      },
+      {
+        "name": "Seagate BarraCuda 2TB HDD",
+        "brand": "Seagate",
+        "itemId": "item06",
+        "price": "$560",
+        "series": "BarraCuda",
+        "capacity": "2TB",
+        "interface": "SATA 6Gb/s",
+        "rpm": "7200",
+        "img": "https://static.toiimg.com/thumb/msid-54630886,width-800,resizemode-4,imgsize-104304/share.jpg",
+        "bufferSize": "256MB",
+        "technicalInfo": {
+          "warranty": "2 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Motherboards",
+    "id": "4",
+    "items": [
+      {
+        "name": "ASUS ROG Strix Z590-E",
+        "brand": "ASUS",
+        "itemId": "item07",
+        "price": "$560",
+        "series": "ROG Strix",
+        "model": "Z590-E",
+        "description": "High-end ATX motherboard with Wi-Fi 6 and Bluetooth 5.1 support.",
+        "socketType": "LGA 1200",
+        "chipset": "Z590",
+        "formFactor": "ATX",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Computer-motherboard.jpg",
+        "memorySupport": {
+          "memoryType": "DDR4",
+          "memorySpeed": "5333MHz",
+          "memorySlots": 4
+        },
+        "expansionSlots": {
+          "pciSlots": 3,
+          "m2Slots": 2
+        },
+        "storage": {
+          "sataPorts": 6,
+          "m2Slots": 3
+        },
+        "networking": {
+          "ethernet": "2.5Gbps",
+          "wiFi": "802.11ax",
+          "bluetooth": "5.1"
+        },
+        "audio": {
+          "audioCodec": "ROG SupremeFX ALC4080",
+          "audioChannels": "7.1"
+        },
+        "usbPorts": {
+          "usbTypeC": 2,
+          "usbTypeA": 8
+        },
+        "technicalInfo": {
+          "warranty": "3 Year"
+        }
+      },
+      {
+        "name": "MSI MPG B550 Gaming Edge WiFi",
+        "brand": "MSI",
+        "itemId": "item08",
+        "price": "$560",
+        "series": "MPG",
+        "model": "B550 Gaming Edge WiFi",
+        "description": "ATX motherboard with Wi-Fi 6 and a strong power delivery system.",
+        "socketType": "AM4",
+        "chipset": "B550",
+        "img": "https://ae01.alicdn.com/kf/Sd4a2478fb4ec430b9f71040017e40cf2d/Motherboard-Bongkar-Asli-untuk-DELL-Presisi-T3610-X79.jpg",
+        "formFactor": "ATX",
+        "memorySupport": {
+          "memoryType": "DDR4",
+          "memorySpeed": "4866MHz",
+          "memorySlots": 4
+        },
+        "expansionSlots": {
+          "pciSlots": 2,
+          "m2Slots": 2
+        },
+        "storage": {
+          "sataPorts": 6,
+          "m2Slots": 2
+        },
+        "networking": {
+          "ethernet": "2.5Gbps",
+          "wiFi": "802.11ax",
+          "bluetooth": "5.1"
+        },
+        "audio": {
+          "audioCodec": "Realtek ALC1200",
+          "audioChannels": "7.1"
+        },
+        "usbPorts": {
+          "usbTypeC": 1,
+          "usbTypeA": 6
+        },
+        "technicalInfo": {
+          "warranty": "3 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Power Supplies",
+    "id": "5",
+    "items": [
+      {
+        "name": "EVGA SuperNOVA 750W",
+        "brand": "EVGA",
+        "itemId": "item09",
+        "price": "$560",
+        "model": "SuperNOVA 750W",
+        "description": "750W 80+ Gold certified modular power supply with a quiet fan.",
+        "efficiency": "80+ Gold",
+        "wattage": "750W",
+        "modular": "Fully Modular",
+        "img": "https://www.avnet.com/opasdata/d120001/medias/images/187/power-supplies-Taxonomy.jpg",
+        "fan": "135mm Double Ball Bearing Fan",
+        "protections": ["OVP", "UVP", "OCP", "OTP", "SCP", "OPP"],
+        "connectors": {
+          "atx24Pin": 1,
+          "eps12v8Pin": 1,
+          "pcie8Pin": 4,
+          "sata": 9,
+          "molex": 3
+        },
+        "technicalInfo": {
+          "warranty": "10 Year"
+        }
+      },
+      {
+        "name": "Corsair RM850x 850W",
+        "brand": "Corsair",
+        "itemId": "item10",
+        "price": "$560",
+        "model": "RM850x 850W",
+        "description": "850W 80+ Gold certified fully modular power supply with low-noise operation.",
+        "efficiency": "80+ Gold",
+        "wattage": "850W",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzEOYSPZf6oD3xlSh660GS1gMR2XOJUxEJYvxKsOHjq6NflzSToWkPHrQIHWlR5hwh87I&usqp=CAU",
+        "modular": "Fully Modular",
+        "fan": "135mm Rifle Bearing Fan",
+        "protections": ["OVP", "UVP", "OCP", "OTP", "SCP", "OPP"],
+        "connectors": {
+          "atx24Pin": 1,
+          "eps12v8Pin": 2,
+          "pcie8Pin": 6,
+          "sata": 12,
+          "molex": 8
+        },
+        "technicalInfo": {
+          "warranty": "10 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cases",
+    "id": "6",
+    "items": [
+      {
+        "name": "NZXT H510i",
+        "brand": "NZXT",
+        "itemId": "item11",
+        "price": "$560",
+        "model": "H510i",
+        "description": "Compact ATX mid-tower case with RGB lighting and smart device control.",
+        "formFactor": "ATX Mid-Tower",
+        "img": "https://i.ebayimg.com/images/g/v~oAAOSwCQNhR7FG/s-l1200.jpg",
+        "driveBays": {
+          "internal2.5": 2,
+          "internal3.5": 2
+        },
+        "expansionSlots": 7,
+        "cooling": {
+          "frontFans": 2,
+          "rearFans": 1,
+          "topFans": 1,
+          "maxCoolerHeight": "165mm"
+        },
+        "frontIO": {
+          "usbTypeC": 1,
+          "usbTypeA": 1,
+          "audio": "HD Audio"
+        },
+        "technicalInfo": {
+          "warranty": "2 Year"
+        }
+      },
+      {
+        "name": "Fractal Design Meshify C",
+        "brand": "Fractal Design",
+        "itemId": "item12",
+        "price": "$560",
+        "model": "Meshify C",
+        "description": "Compact ATX mid-tower case with excellent airflow and tempered glass side panel.",
+        "formFactor": "ATX Mid-Tower",
+        "img": "https://m.media-amazon.com/images/I/61kWyYEzKoL.jpg",
+        "driveBays": {
+          "internal2.5": 2,
+          "internal3.5": 2
+        },
+        "expansionSlots": 7,
+        "cooling": {
+          "frontFans": 2,
+          "rearFans": 1,
+          "topFans": 2,
+          "maxCoolerHeight": "172mm"
+        },
+        "frontIO": {
+          "usbTypeC": 1,
+          "usbTypeA": 1,
+          "audio": "HD Audio"
+        },
+        "technicalInfo": {
+          "warranty": "2 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Cooling",
+    "id": "7",
+    "items": [
+      {
+        "name": "Noctua NH-D15",
+        "brand": "Noctua",
+        "itemId": "item13",
+        "price": "$560",
+        "model": "NH-D15",
+        "description": "Dual-tower CPU cooler with excellent cooling performance and low noise levels.",
+        "socketCompatibility": "LGA115x, LGA20xx, AM4",
+        "img": "https://www.cloud.ryanscomputers.com/cdn/products/main/montech-ax120-pwm-argb-120mm-1xfan-black-casing-11695726957.webp",
+        "fanSize": "140mm",
+        "rpm": "300-1500 RPM",
+        "noiseLevel": "24.6 dBA",
+        "tdp": "220W",
+        "technicalInfo": {
+          "warranty": "6 Year"
+        }
+      },
+      {
+        "name": "Corsair H100i RGB Platinum",
+        "brand": "Corsair",
+        "itemId": "item14",
+        "price": "$560",
+        "model": "H100i RGB Platinum",
+        "description": "240mm all-in-one liquid cooler with RGB lighting and powerful cooling performance.",
+        "socketCompatibility": "LGA115x, LGA20xx, AM4",
+        "fanSize": "120mm",
+        "img": "https://images-cdn.ubuy.co.in/633de2519937f8510930d1d7-ubuy-online-shopping.jpg",
+        "rpm": "2400 RPM",
+        "noiseLevel": "37 dBA",
+        "tdp": "225W",
+        "technicalInfo": {
+          "warranty": "5 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Monitors",
+    "id": "8",
+    "items": [
+      {
+        "name": "Dell S2719DGF 27-inch",
+        "brand": "Dell",
+        "itemId": "item15",
+        "price": "$560",
+        "model": "S2719DGF",
+        "description": "27-inch QHD gaming monitor with fast refresh rates and FreeSync support.",
+        "displaySize": "27 inches",
+        "img": "https://image.benq.com/is/image/benqco/home-herobanner-m-1?$ResponsivePreset$",
+        "resolution": "2560x1440",
+        "panelType": "TN",
+        "refreshRate": "155Hz",
+        "responseTime": "1ms",
+        "ports": {
+          "hdmi": 2,
+          "displayPort": "1"
+        },
+        "technicalInfo": {
+          "warranty": "3 Year"
+        }
+      },
+      {
+        "name": "LG 34GK950F-B 34-inch",
+        "brand": "LG",
+        "itemId": "itme16",
+        "price": "$560",
+        "model": "34GK950F-B",
+        "description": "34-inch ultrawide gaming monitor with a high refresh rate and FreeSync 2 support.",
+        "displaySize": "34 inches",
+        "resolution": "3440x1440",
+        "img": "https://www.popsci.com/uploads/2022/06/05/benq-best-monitor-for-eye-strain.jpg",
+        "panelType": "Nano IPS",
+        "refreshRate": "144Hz",
+        "responseTime": "1ms",
+        "ports": {
+          "hdmi": 2,
+          "displayPort": "1"
+        },
+        "technicalInfo": {
+          "warranty": "1 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Keyboards",
+    "id": "9",
+    "items": [
+      {
+        "name": "Corsair K95 RGB Platinum XT",
+        "brand": "Corsair",
+        "itemId": "item17",
+        "price": "$560",
+        "model": "K95 RGB Platinum XT",
+        "img": "https://m.media-amazon.com/images/I/61MCVrX7qiL._AC_UF1000,1000_QL80_.jpg",
+        "description": "High-end mechanical gaming keyboard with customizable RGB lighting and dedicated media keys.",
+        "switchType": "Cherry MX Brown",
+        "keyRollover": "N-Key",
+        "backlighting": "RGB",
+        "additionalFeatures": ["Detachable Wrist Rest", "USB Pass-Through"],
+        "technicalInfo": {
+          "warranty": "2 Year"
+        }
+      },
+      {
+        "name": "Logitech G Pro X Mechanical Gaming Keyboard",
+        "brand": "Logitech",
+        "itemId": "item18",
+        "price": "$560",
+        "model": "G Pro X",
+        "description": "Tenkeyless mechanical gaming keyboard with hot-swappable switches and customizable lighting.",
+        "img": "https://media.karousell.com/media/photos/products/2022/7/24/rk_royal_kludge_rk61_rgb_wirel_1658627860_dc6e5e1a_progressive.jpg",
+        "switchType": "Hot-Swappable GX Switches",
+        "keyRollover": "26-Key",
+        "backlighting": "RGB",
+        "additionalFeatures": ["Detachable Micro USB Cable"],
+        "technicalInfo": {
+          "warranty": "2 Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mice",
+    "id": "10",
+    "items": [
+      {
+        "name": "Logitech G Pro Wireless",
+        "brand": "Logitech",
+        "itemId": "item19",
+        "price": "$560",
+        "model": "G Pro Wireless",
+        "description": "Wireless gaming mouse with HERO sensor and customizable weight.",
+        "sensorType": "HERO",
+        "dpi": "16,000 DPI",
+        "img": "https://i.insider.com/5e6bc61984159f583f4c7432?width=700",
+        "buttons": 8,
+        "scrollWheel": "Hyper-Fast",
+        "additionalFeatures": ["Customizable RGB Lighting"],
+        "technicalInfo": {
+          "warranty": "2 Year"
+        }
+      },
+      {
+        "name": "SteelSeries Rival 600",
+        "brand": "SteelSeries",
+        "itemId": "item20",
+        "price": "$560",
+        "model": "Rival 600",
+        "description": "Dual-sensor gaming mouse with customizable weight and split-trigger buttons.",
+        "img": "https://images-eu.ssl-images-amazon.com/images/I/51sKcuOeamL._AC_UL330_SR330,330_.jpg",
+        "sensorType": "TrueMove 3+ Dual Sensor System",
+        "dpi": "12,000 DPI",
+        "buttons": "7",
+        "scrollWheel": "Traditional",
+        "additionalFeatures": ["Customizable RGB Lighting"],
+        "technicalInfo": {
+          "warranty": "1Year"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Mouse",
+    "id": "11",
+    "items": [
+      {
+        "name": "Intel Core i9-11900K",
+        "brand": "Intel",
+        "itemId": "item21",
+        "price": "$560",
+        "series": "Core i9",
+        "model": "i9-11900K",
+        "description": "10-core, 20-thread processor for high-end gaming and content creation.",
+        "cpuCoolerIncluded": "No",
+        "codeName": "Rocket Lake",
+        "generation": "11th Gen",
+        "img": "https://static-01.daraz.com.bd/p/50195ce4a273f9b0328aeda0111c9348.jpg",
+        "socketsSupported": "LGA 1200",
+        "performance": {
+          "processorType": "Core i9",
+          "baseFrequency": "3.50GHz",
+          "turboFrequencyMax": "5.30GHz",
+          "core": 10,
+          "threads": 20,
+          "cpuCache": "20MB",
+          "l2Cache": "2.5MB",
+          "l3Cache": "16.5MB",
+          "tdp": "125W",
+          "lithography": "14nm",
+          "memorySupport": {
+            "memoryMax": "128GB",
+            "memoryType": "DDR4-3200",
+            "memoryChannel": 2,
+            "eccMemorySupported": "No"
+          },
+          "graphics": {
+            "processorGraphics": "Intel UHD Graphics 750",
+            "graphicsBaseFrequency": "350MHz",
+            "graphicsMaxFrequency": "1.30GHz",
+            "graphicsMaxResolution": "4096x2304@60Hz"
+          },
+          "technicalInfo": {
+            "compatibleProducts": "Chipsets: Z590, Z490, H570, B560",
+            "warranty": "3 Year",
+            "warrantyDetails": "3 Year (No Warranty for Fan or Cooler)"
+          }
+        }
+      },
+      {
+        "name": "AMD Ryzen 9 5950X",
+        "brand": "AMD",
+        "itemId": "itme22",
+        "price": "$560",
+        "series": "Ryzen 9",
+        "model": "5950X",
+        "description": "16-core, 32-thread CPU for gamers and professionals.",
+        "cpuCoolerIncluded": "No",
+        "codeName": "Zen 3",
+        "generation": "5000",
+        "img": "https://m.media-amazon.com/images/I/61XLVUhdSAL.jpg",
+        "socketsSupported": "AM4",
+        "performance": {
+          "processorType": "Ryzen 9",
+          "baseFrequency": "3.40GHz",
+          "turboFrequencyMax": "4.90GHz",
+          "core": 16,
+          "threads": 32,
+          "cpuCache": "72MB",
+          "l2Cache": "8MB",
+          "l3Cache": "64MB",
+          "tdp": "105W",
+          "lithography": "TSMC 7nm FinFET",
+          "memorySupport": {
+            "memoryMax": "128GB",
+            "memoryType": "DDR4-3200",
+            "memoryChannel": 2,
+            "eccMemorySupported": "No"
+          },
+          "graphics": {
+            "processorGraphics": "No"
+          },
+          "technicalInfo": {
+            "compatibleProducts": "Chipsets: X570, B550, B450, A520",
+            "warranty": "3 Year",
+            "warrantyDetails": "3 Year (No Warranty for Fan or Cooler)"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Processors",
+    "id": "12",
+    "items": [
+      {
+        "name": "Intel Core i9-11900K",
+        "brand": "Intel",
+        "series": "Core i9",
+        "itemId": "itme23",
+        "price": "$560",
+        "model": "i9-11900K",
+        "description": "10-core, 20-thread processor for high-end gaming and content creation.",
+        "cpuCoolerIncluded": "No",
+        "codeName": "Rocket Lake",
+        "generation": "11th Gen",
+        "img": "https://static-01.daraz.com.bd/p/50195ce4a273f9b0328aeda0111c9348.jpg",
+        "socketsSupported": "LGA 1200",
+        "performance": {
+          "processorType": "Core i9",
+          "baseFrequency": "3.50GHz",
+          "turboFrequencyMax": "5.30GHz",
+          "core": 10,
+          "threads": 20,
+          "cpuCache": "20MB",
+          "l2Cache": "2.5MB",
+          "l3Cache": "16.5MB",
+          "tdp": "125W",
+          "lithography": "14nm",
+          "memorySupport": {
+            "memoryMax": "128GB",
+            "memoryType": "DDR4-3200",
+            "memoryChannel": 2,
+            "eccMemorySupported": "No"
+          },
+          "graphics": {
+            "processorGraphics": "Intel UHD Graphics 750",
+            "graphicsBaseFrequency": "350MHz",
+            "graphicsMaxFrequency": "1.30GHz",
+            "graphicsMaxResolution": "4096x2304@60Hz"
+          },
+          "technicalInfo": {
+            "compatibleProducts": "Chipsets: Z590, Z490, H570, B560",
+            "warranty": "3 Year",
+            "warrantyDetails": "3 Year (No Warranty for Fan or Cooler)"
+          }
+        }
+      },
+      {
+        "name": "AMD Ryzen 9 5950X",
+        "brand": "AMD",
+        "itemId": "item24",
+        "price": "$560",
+        "series": "Ryzen 9",
+        "model": "5950X",
+        "description": "16-core, 32-thread CPU for gamers and professionals.",
+        "cpuCoolerIncluded": "No",
+        "codeName": "Zen 3",
+        "generation": "5000",
+        "img": "https://m.media-amazon.com/images/I/61XLVUhdSAL.jpg",
+        "socketsSupported": "AM4",
+        "performance": {
+          "processorType": "Ryzen 9",
+          "baseFrequency": "3.40GHz",
+          "turboFrequencyMax": "4.90GHz",
+          "core": 16,
+          "threads": 32,
+          "cpuCache": "72MB",
+          "l2Cache": "8MB",
+          "l3Cache": "64MB",
+          "tdp": "105W",
+          "lithography": "TSMC 7nm FinFET",
+          "memorySupport": {
+            "memoryMax": "128GB",
+            "memoryType": "DDR4-3200",
+            "memoryChannel": 2,
+            "eccMemorySupported": "No"
+          },
+          "graphics": {
+            "processorGraphics": "No"
+          },
+          "technicalInfo": {
+            "compatibleProducts": "Chipsets: X570, B550, B450, A520",
+            "warranty": "3 Year",
+            "warrantyDetails": "3 Year (No Warranty for Fan or Cooler)"
+          }
+        }
+      }
+    ]
+  }
+]
