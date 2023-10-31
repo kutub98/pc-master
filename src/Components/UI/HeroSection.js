@@ -3,7 +3,8 @@ import { Carousel } from "@material-tailwind/react";
 
 const HeroSection = () => {
   return (
-    <Carousel
+   <div className="w-full">
+     <Carousel
       className="rounded-xl mx-auto w-full container"
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
@@ -35,6 +36,7 @@ const HeroSection = () => {
         className="h-full w-full object-cover"
       />
     </Carousel>
+   </div>
   );
 };
 

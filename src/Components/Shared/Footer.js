@@ -23,14 +23,14 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="relative w-full text-white myFooter">
-      <div className="mx-auto w-full max-w-7xl px-8 text-white">
+    <footer className="relative w-full bg-[#fdfdfd] ">
+      <div className="mx-auto w-full max-w-7xl px-8 text-gray-700">
         <div className="mx-auto grid w-full grid-cols-1 gap-8 py-12 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           {SITEMAP.map(({ title, links }, key) => (
             <div key={key} className="w-full">
               <Typography
                 variant="small"
-                color="white"
+                color="text-gray-700"
                 className="mb-4 font-bold uppercase opacity-50"
               >
                 {title}
@@ -40,7 +40,7 @@ const Footer = () => {
                   <Typography
                     key={key}
                     as="li"
-                    color="white"
+                    color="text-gray-700"
                     className="font-normal"
                   >
                     <a
@@ -55,16 +55,16 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex w-full flex-col items-center justify-center border-t border-white-50 py-4 md:flex-row md:justify-between">
+        <div className="flex w-full flex-col items-center justify-center border-t border-text-gray-700-50 py-4 md:flex-row md:justify-between">
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal text-white-900 md:mb-0"
+            className="mb-4 text-center font-normal text-gray-700-900 md:mb-0"
           >
             &copy; {currentYear}{" "}
             <a href="http://jmkutub1.web.app/">Kutub Uddin</a>. All Rights
             Reserved.
           </Typography>
-          <div className="flex gap-4 text-white-900 sm:justify-center">
+          <div className="flex gap-4 text-gray-700-900 sm:justify-center">
             <Typography
               as="a"
               href="#"

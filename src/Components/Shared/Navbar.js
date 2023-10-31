@@ -209,7 +209,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <div className="">
+    
       <Navbar className="mx-auto  px-4  NavBar">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
@@ -223,11 +223,11 @@ const NavBar = () => {
           <div className="hidden lg:block">
             <NavList />
           </div>
-          <div>
+          
             <div className="flex" onClick={setOpen}>
               <Input
-                className="w-40"
-                icon={<MagnifyingGlassIcon className="h-5 w-5 -ml-16" />}
+                className="w-40 flex justify-between"
+                icon={<MagnifyingGlassIcon className="h-5 w-5 " />}
                 label="Search"
               />
             </div>
@@ -242,7 +242,7 @@ const NavBar = () => {
                 </DialogFooter>
               </form>
             </Dialog>
-          </div>
+         
           <div className="hidden gap-2 lg:flex">
             {/* <Link href={"/signin"}>
           <Button variant="text"  size="md" color="white" className=" bg-blue-500 hover:bg-blue-800">
@@ -293,7 +293,7 @@ const NavBar = () => {
           </div>
         </Collapse>
       </Navbar>
-    </div>
+   
   );
 };
 export default NavBar;

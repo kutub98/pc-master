@@ -20,17 +20,17 @@ const ProductFeatures = ({ singlePcItem }) => {
     <div className=" ">
       <div className="wrapper ">
         <svg>
-          <text x="50%" y="50%" dy="0" textAnchor="middle">
+          <text x="50%" y="50%" dy="0" textAnchor="middle" className=" text-2xl sm:text-4xl lg:text-7xl">
             Product Features
           </text>
         </svg>
       </div>
 
-      <div className="grid lg:grid-cols-2 xl:grid-cols-3 md:grid-cols-1 gap-6 container mx-auto max-w-7xl sm:grid-cols-1 xs:grid-cols-1">
+      <div className="grid lg:grid-cols-3 xl:grid-cols-3 md:grid-cols-1 gap-4 container mx-auto max-w-7xl sm:grid-cols-1 xs:grid-cols-1">
         {details.map((PcItem, index) =>
           PcItem.map((item, index) => (
-            <Card key={index} className="w-66">
-              <CardHeader shadow={false} floated={false} className="h-48">
+            <Card key={index} className="">
+              <CardHeader shadow={false} floated={false} className=" h-40">
                 <img
                   src={item.img}
                   alt={item.name}

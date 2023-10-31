@@ -9,7 +9,7 @@ import React from "react";
 function SinglePcItemData({ SinglePcItem }) {
   // const router = useRouter(SinglePcItem);
   // const { itemId } = router.query;
-  console.log(SinglePcItem, "from single Pc item Data");
+  // console.log(SinglePcItem, "from single Pc item Data");
   const details = SinglePcItem.data;
   return (
     <div className="mx-auto max-w-7xl">
@@ -21,7 +21,7 @@ function SinglePcItemData({ SinglePcItem }) {
         </svg>
       </div>
       {/* You can access the data here */}
-      <div>
+      <>
         <div className="p-6 dark:bg-violet-400 bg-white text-black  dark:text-gray-900 mx-6 h-auto rounded">
           <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -98,7 +98,7 @@ function SinglePcItemData({ SinglePcItem }) {
             </div>
           </div>
         </div>
-      </div>
+      </>
     </div>
   );
 }

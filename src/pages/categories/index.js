@@ -1,13 +1,14 @@
 import React from "react";
 import RootLayout from "../../Components/Layouts/RootLalyout";
-import CategoriesFeatues from "@/Components/UI/CategoriesFeatues";
+
 import axios from "axios";
+import CategoriesFeatures from "@/Components/UI/CategoriesFeatues";
 
 function Categories({ data }) {
   // console.log(data , "From Categories")
   return (
     <div>
-      <CategoriesFeatues key={data.id} data={data}></CategoriesFeatues>
+      <CategoriesFeatures key={data.id} data={data}></CategoriesFeatures>
     </div>
   );
 }
@@ -35,13 +36,4 @@ export async function getServerSideProps() {
   };
 }
 
-// export const getStaticProps = async ()=> {
-//   const data = await fetch('http://localhost:5000/categories/');
-//   const result = await data.json();
-//   // console.log(result)
-//   return {
-//     props: {
-//       categories: result || null
-//     }
-//   }
-// }
+

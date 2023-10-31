@@ -27,7 +27,7 @@ const Rootlayout = ({ children }) => {
     };
   }, []);
   return (
-    <div>
+    <>
       <div className="sticky top-0 w-full z-10">
         <NavBar />
       </div>
@@ -41,7 +41,7 @@ const Rootlayout = ({ children }) => {
       >
         <ArrowUpCircleIcon className="h-12 w-12 animate-bounce hover:scale-105 rounded-full bg-cyan-500 border-none text-white "></ArrowUpCircleIcon>
       </div>
-    </div>
+    </>
   );
 };
 

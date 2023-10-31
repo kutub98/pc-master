@@ -3,8 +3,8 @@ import React from "react";
 
 const DownloadApp = () => {
   return (
-    <div>
-      <section className="px-8 my-8 !container w-full mx-auto dark:bg-gray-800 dark:text-gray-50">
+   
+      <section className="bg-[#fdfdfd] rounded p-4 mt-26  mb-8 !container w-full mx-auto dark:bg-gray-800 text-gray-600">
         <h1 className="text-4xl antialiased font-semibold leadi text-center dark:text-gray-100 my-10">
           Get Our App
         </h1>
@@ -47,7 +47,7 @@ const DownloadApp = () => {
           </div>
         </div>
       </section>
-    </div>
+    
   );
 };
 
