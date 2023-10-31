@@ -10,7 +10,6 @@ function ProductFeaturesIndex({ data }) {
     return { name: category.name, items: items };
   });
 
-
   return (
     <div className="">
       <ProductFeatures singlePcItem={AllData} />
@@ -23,7 +22,7 @@ export default ProductFeaturesIndex;
 export async function getServerSideProps() {
   try {
     const response = await axios.get("http://localhost:5000/pcItems/");
-    const data = await response.data; 
+    const data = await response.data;
     return {
       props: {
         data: data,

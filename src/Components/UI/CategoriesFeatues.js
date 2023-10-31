@@ -2,99 +2,108 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import axios from "axios";
-import { BsFillKeyboardFill,BsFillMotherboardFill } from "react-icons/bs";
+import { BsFillKeyboardFill, BsFillMotherboardFill } from "react-icons/bs";
 import { CiMicrophoneOn } from "react-icons/ci";
 import { FaMemory } from "react-icons/fa";
-import { MdRestorePage,MdMonitor,MdPowerSettingsNew,MdMouse,MdIntegrationInstructions,MdMonitorHeart } from "react-icons/md";
-
+import {
+  MdRestorePage,
+  MdMonitor,
+  MdPowerSettingsNew,
+  MdMouse,
+  MdIntegrationInstructions,
+  MdMonitorHeart,
+} from "react-icons/md";
 
 import { Button } from "@material-tailwind/react";
 function CategoriesFeatures({ data }) {
-  
   const Icon = [
-   {
-    icon: <BsFillKeyboardFill/>
-   },
-   {
-    icon: <CiMicrophoneOn/>
-   },
-   {
-    icon: <FaMemory/>
-   },
-   {
-    icon: <MdRestorePage/>
-   },
-   {
-    icon: <BsFillMotherboardFill/>
-   },
-   {
-    icon: <MdMonitor/>
-   },
-   {
-    icon: <MdMonitor/>
-   },
-   {
-    icon: <MdIntegrationInstructions/>
-   },
-   {
-    icon: <MdPowerSettingsNew/>
-   },
-   {
-    icon: <MdMonitorHeart/>
-   },
-   {
-    icon: <MdMouse/>
-   },
-   {
-    icon: <MdMouse/>
-   },
+    {
+      icon: <BsFillKeyboardFill />,
+    },
+    {
+      icon: <CiMicrophoneOn />,
+    },
+    {
+      icon: <FaMemory />,
+    },
+    {
+      icon: <MdRestorePage />,
+    },
+    {
+      icon: <BsFillMotherboardFill />,
+    },
+    {
+      icon: <MdMonitor />,
+    },
+    {
+      icon: <MdMonitor />,
+    },
+    {
+      icon: <MdIntegrationInstructions />,
+    },
+    {
+      icon: <MdPowerSettingsNew />,
+    },
+    {
+      icon: <MdMonitorHeart />,
+    },
+    {
+      icon: <MdMouse />,
+    },
+    {
+      icon: <MdMouse />,
+    },
   ];
   return (
-   <div className="bg-[#fdfdfd] w-full rounded">
-    <div className="lg:px-52 px-0 ">
-  <div className="wrapper text-center">
-    <svg>
-      <text x="50%" y="50%" dy="0" textAnchor="middle" className=" text-2xl md:text-lg lg:text-7xl">
-        Categories Features
-      </text>
-    </svg>
-  </div>
-  <div className=" container mx-auto w-full max-w-7xl py-2 grid grid-col-12">
-    {data.data.map((category, index) => (
-      <div key={index}>
-        
-          <div className="relative mt-2 flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-            <div className="p-4 flex justify-between w-full">
-              <div className="flex items-center ">
-                <div key={index} className=" h-6 w-6 mr-3 animate-pulse text-[#32037f] ">
-                  {Icon[index].icon}
+    <div className="bg-[#fdfdfd] w-full rounded">
+      <div className="lg:px-52 px-0 ">
+        <div className="wrapper text-center">
+          <svg>
+            <text
+              x="50%"
+              y="50%"
+              dy="0"
+              textAnchor="middle"
+              className=" text-2xl md:text-lg lg:text-7xl"
+            >
+              Categories Features
+            </text>
+          </svg>
+        </div>
+        <div className=" container mx-auto w-full max-w-7xl py-2 grid grid-col-12">
+          {data.data.map((category, index) => (
+            <div key={index}>
+              <div className="relative mt-2 flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div className="p-4 flex justify-between w-full">
+                  <div className="flex items-center ">
+                    <div
+                      key={index}
+                      className=" h-6 w-6 mr-3 animate-pulse text-[#32037f] "
+                    >
+                      {Icon[index].icon}
+                    </div>
+                    <h5 className="block font-sans text-xl text-opacity-70 leading-snug tracking-normal text-blue-gray-900 antialiased ">
+                      {category.name}
+                    </h5>
+                  </div>
+                  <div className="">
+                    <Link href={`/categories/${category._id}`}>
+                      <Button>Choose</Button>
+                    </Link>
+                  </div>
                 </div>
-                <h5 className="block font-sans text-xl text-opacity-70 leading-snug tracking-normal text-blue-gray-900 antialiased ">
-                  {category.name}
-                </h5>
-              </div>
-              <div className="">
-                
-                <Link href={`/categories/${category._id}`}>
-                  <Button>Choose</Button>
-                </Link>
               </div>
             </div>
-          </div>
-        
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
     </div>
-   </div>
-
-
   );
 }
 
 export async function getServerSideProps({ params }) {
   try {
-    const categoryId = params.id; 
+    const categoryId = params.id;
 
     const response = await axios.get(
       `http://localhost:5000/pcItems/${categoryId}`,

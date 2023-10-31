@@ -20,7 +20,13 @@ const ProductFeatures = ({ singlePcItem }) => {
     <div className=" ">
       <div className="wrapper ">
         <svg>
-          <text x="50%" y="50%" dy="0" textAnchor="middle" className=" text-2xl sm:text-4xl lg:text-7xl">
+          <text
+            x="50%"
+            y="50%"
+            dy="0"
+            textAnchor="middle"
+            className=" text-2xl sm:text-4xl lg:text-7xl"
+          >
             Product Features
           </text>
         </svg>

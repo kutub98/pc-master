@@ -19,7 +19,7 @@ const IHome = ({ data, singlePcItem }) => {
         <ProductFeatures singlePcItem={singlePcItem} />
       </div>
 
-      <Features  />
+      <Features />
       <div className="">
         <DownloadApp />
       </div>
@@ -31,5 +31,3 @@ const IHome = ({ data, singlePcItem }) => {
 };
 
 export default IHome;
-
-

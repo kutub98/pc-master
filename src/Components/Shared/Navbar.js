@@ -209,91 +209,89 @@ const NavBar = () => {
   }, []);
 
   return (
-    
-      <Navbar className="mx-auto  px-4  NavBar">
-        <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="/"
-            variant="h6"
-            className="mr-4 cursor-pointer py-1.5 text-black lg:ml-2"
-          >
-            PC MASTER
-          </Typography>
-          <div className="hidden lg:block">
-            <NavList />
-          </div>
-          
-            <div className="flex" onClick={setOpen}>
-              <Input
-                className="w-40 flex justify-between"
-                icon={<MagnifyingGlassIcon className="h-5 w-5 " />}
-                label="Search"
-              />
-            </div>
+    <Navbar className="mx-auto  px-4  NavBar">
+      <div className="flex items-center justify-between text-blue-gray-900">
+        <Typography
+          as="a"
+          href="/"
+          variant="h6"
+          className="mr-4 cursor-pointer py-1.5 text-black lg:ml-2"
+        >
+          PC MASTER
+        </Typography>
+        <div className="hidden lg:block">
+          <NavList />
+        </div>
 
-            <Dialog size="sm" open={open} handler={handleOpen}>
-              <form className="">
-                <DialogFooter className="flex gap-2 border-t border-blue-gray-50">
-                  <Input type="search" label="Search here ...." required />
-                  <Button className="ml-2" size="sm" type="submit">
-                    Search
-                  </Button>
-                </DialogFooter>
-              </form>
-            </Dialog>
-         
-          <div className="hidden gap-2 lg:flex">
-            {/* <Link href={"/signin"}>
+        <div className="flex" onClick={setOpen}>
+          <Input
+            className="w-40 flex justify-between"
+            icon={<MagnifyingGlassIcon className="h-5 w-5 " />}
+            label="Search"
+          />
+        </div>
+
+        <Dialog size="sm" open={open} handler={handleOpen}>
+          <form className="">
+            <DialogFooter className="flex gap-2 border-t border-blue-gray-50">
+              <Input type="search" label="Search here ...." required />
+              <Button className="ml-2" size="sm" type="submit">
+                Search
+              </Button>
+            </DialogFooter>
+          </form>
+        </Dialog>
+
+        <div className="hidden gap-2 lg:flex">
+          {/* <Link href={"/signin"}>
           <Button variant="text"  size="md" color="white" className=" bg-blue-500 hover:bg-blue-800">
             Sign In
           </Button>
           </Link> */}
-            <Link href={"/signup"}>
-              <Button variant="gradient" size="md">
-                Sign Up
-              </Button>
-            </Link>
-            <Link href={"/#"}>
-              <Button className="customButton" size="md">
-                PC BUILDER
-              </Button>
-            </Link>
-          </div>
-          <IconButton
-            variant="text"
-            color="blue-gray"
-            className="lg:hidden"
-            onClick={() => setOpenNav(!openNav)}
-          >
-            {openNav ? (
-              <XMarkIcon className="h-6 w-6 text-black" strokeWidth={2} />
-            ) : (
-              <Bars3Icon className="h-6 w-6 text-black" strokeWidth={2} />
-            )}
-          </IconButton>
+          <Link href={"/signup"}>
+            <Button variant="gradient" size="md">
+              Sign Up
+            </Button>
+          </Link>
+          <Link href={"/#"}>
+            <Button className="customButton" size="md">
+              PC BUILDER
+            </Button>
+          </Link>
         </div>
+        <IconButton
+          variant="text"
+          color="blue-gray"
+          className="lg:hidden"
+          onClick={() => setOpenNav(!openNav)}
+        >
+          {openNav ? (
+            <XMarkIcon className="h-6 w-6 text-black" strokeWidth={2} />
+          ) : (
+            <Bars3Icon className="h-6 w-6 text-black" strokeWidth={2} />
+          )}
+        </IconButton>
+      </div>
 
-        <Collapse open={openNav}>
-          <NavList />
-          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-            {/* <Link href={"/signin"} onClick={()=> setOpenNav(false)}>
+      <Collapse open={openNav}>
+        <NavList />
+        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+          {/* <Link href={"/signin"} onClick={()=> setOpenNav(false)}>
           <Button variant="text" size="sm" color="white" className="bg-red-600">
             Sign In
           </Button>
           </Link> */}
-            <Link href={"/signup"} onClick={() => setOpenNav(false)}>
-              <Button variant="gradient" size="sm">
-                Sign Up
-              </Button>
-            </Link>
-            <Link href={"/signup"} onClick={() => setOpenNav(false)}>
-              <Button className="customButton">PC BUILDER</Button>
-            </Link>
-          </div>
-        </Collapse>
-      </Navbar>
-   
+          <Link href={"/signup"} onClick={() => setOpenNav(false)}>
+            <Button variant="gradient" size="sm">
+              Sign Up
+            </Button>
+          </Link>
+          <Link href={"/signup"} onClick={() => setOpenNav(false)}>
+            <Button className="customButton">PC BUILDER</Button>
+          </Link>
+        </div>
+      </Collapse>
+    </Navbar>
   );
 };
 export default NavBar;

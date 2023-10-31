@@ -3,9 +3,8 @@ import React from "react";
 
 const Subcripstion = () => {
   return (
-    
-      <div className="bg-[#fdfdfd]">
-        <div
+    <div className="bg-[#fdfdfd]">
+      <div
         className=" my-8  mx-auto container bg-[#fdfdfd] rounded"
         style={{
           backgroundImage: "https://source.unsplash.com/random/640x480",
@@ -36,8 +35,7 @@ const Subcripstion = () => {
           </div>
         </div>
       </div>
-      </div>
-    
+    </div>
   );
 };
 
