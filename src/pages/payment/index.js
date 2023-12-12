@@ -9,8 +9,8 @@ const Payment = () => {
     </div>
   );
 };
-
+export default Payment;
 Payment.getLayout = function getLayout(page) {
   return <Rootlayout>{page}</Rootlayout>;
 };
-export default Payment;
+

@@ -5,7 +5,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
 import { useRouter } from 'next/router';
-import { ServerLink } from '@/config/config';
+import ServerLink from '@/config/config';
 function SinglePcItemData({ SinglePcItem }) {
   const router = useRouter(SinglePcItem);
   const { itemId } = router.query;
@@ -104,12 +104,6 @@ function SinglePcItemData({ SinglePcItem }) {
   );
 }
 
-export default SinglePcItemData;
-
-SinglePcItemData.getLayout = function getLayout(page) {
-  return <Rootlayout>{page}</Rootlayout>;
-};
-
 export const getServerSideProps = async context => {
   try {
     const { singlePcItem } = context.query;
@@ -129,4 +123,10 @@ export const getServerSideProps = async context => {
   return {
     props: {},
   };
+};
+
+export default SinglePcItemData;
+
+SinglePcItemData.getLayout = function getLayout(page) {
+  return <Rootlayout>{page}</Rootlayout>;
 };

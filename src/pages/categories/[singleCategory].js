@@ -11,7 +11,7 @@ import {
 import Link from 'next/link';
 import axios from 'axios';
 import Rootlayout from '@/Components/Layouts/RootLalyout';
-import { ServerLink } from '@/config/config';
+import ServerLink from '@/config/config';
 
 function SingleCategory({ singleCategory }) {
   // console.log(singleCategory.data.items, "single Category");
@@ -87,18 +87,14 @@ function SingleCategory({ singleCategory }) {
   );
 }
 
-SingleCategory.getLayout = function getLayout(page) {
-  return <Rootlayout>{page}</Rootlayout>;
-};
-
-export default SingleCategory;
-
 export async function getServerSideProps({ params }) {
   try {
     const singleCategory = params.singleCategory;
     // console.log(singleCategory, "single category id");
 
-    const response = await axios.get(`${ServerLink.FullData}/pcItems/${singleCategory}`);
+    const response = await axios.get(
+      `${ServerLink.FullData}/pcItems/${singleCategory}`,
+    );
 
     if (response.status === 200) {
       const singleCategoryData = response.data;
@@ -119,3 +115,7 @@ export async function getServerSideProps({ params }) {
     };
   }
 }
+export default SingleCategory;
+SingleCategory.getLayout = function getLayout(page) {
+  return <Rootlayout>{page}</Rootlayout>;
+};
