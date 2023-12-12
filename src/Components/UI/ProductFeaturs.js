@@ -59,15 +59,16 @@ const ProductFeatures = ({ singlePcItem }) => {
                       </Typography>
                     </div>
                   </CardBody>
-                  <CardFooter className=" lg:flex md:flex block lg:justify-around  gap-4 sm:flex md:justify-around sm:justify-around xs:flex">
-                    <Button className="bg-blue-gray-900/10 my-1 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 py-3 w-full ">
+                  <CardFooter className=" lg:flex md:flex block lg:justify-around  gap-4 sm:flex md:justify-around sm:justify-around xs:flex items-center">
+                    <Button className="bg-cyan-400 my-1 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 py-3 w-full ">
                       Add to Cart
                     </Button>
-                    <Button className="bg-blue-500  my-1  shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 py-3 w-full  text-white">
-                      <Link href={`/allProducts/${item.itemId}`}>
-                        More Details
-                      </Link>
-                    </Button>
+                    <Link
+                      href={`/allProducts/${item.itemId}`}
+                      className="w-full"
+                    >
+                      <Button>More Details</Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               )),
@@ -89,15 +90,16 @@ const ProductFeatures = ({ singlePcItem }) => {
                       </Typography>
                     </div>
                   </CardBody>
-                  <CardFooter className=" lg:flex md:flex block lg:justify-around  gap-4 sm:flex md:justify-around sm:justify-around xs:flex">
-                    <Button className="bg-blue-gray-900/10 my-1 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 py-3 w-full ">
+                  <CardFooter className=" lg:flex md:flex block lg:justify-around  gap-4 sm:flex md:justify-around sm:justify-around xs:flex items-center">
+                    <Button className="bg-cyan-400 my-1 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 py-3 w-full ">
                       Add to Cart
                     </Button>
-                    <Button className="bg-blue-500  my-1  shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100 py-3 w-full  text-white">
-                      <Link href={`/allProducts/${item.itemId}`}>
-                        More Details
-                      </Link>
-                    </Button>
+                    <Link
+                      href={`/allProducts/${item.itemId}`}
+                      className="w-full"
+                    >
+                      <Button>More Details</Button>
+                    </Link>
                   </CardFooter>
                 </Card>
               )),
@@ -108,7 +110,7 @@ const ProductFeatures = ({ singlePcItem }) => {
         <Button
           onClick={seeAll ? handlingLess : handlingSeeAll}
           className={`justify-center flex w-1/3 mx-auto my-10 ${
-            seeAll ? 'bg-red-600' : 'bg-green-500'
+            seeAll ? 'bg-gray-800 duration-1000' : 'bg-green-500 duration-500'
           }`}
         >
           {seeAll ? 'See Less' : 'See All'}

@@ -1,4 +1,5 @@
 import ProductFeatures from "@/Components/UI/ProductFeaturs";
+import { servelink } from "@/config/config";
 import axios from "axios";
 import React from "react";
 
@@ -21,7 +22,7 @@ export default ProductFeaturesIndex;
 
 export async function getServerSideProps() {
   try {
-    const response = await axios.get("http://localhost:5000/pcItems/");
+    const response = await axios.get(`${servelink}/pcItems/`);
     const data = await response.data;
     return {
       props: {

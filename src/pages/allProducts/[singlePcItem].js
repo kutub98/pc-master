@@ -3,13 +3,12 @@ import Rootlayout from '@/Components/Layouts/RootLalyout';
 import { Button } from '@material-tailwind/react';
 import axios from 'axios';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
-
+import serverlink, { singlePcItemData } from '@/config/config';
+import { useRouter } from 'next/router';
 function SinglePcItemData({ SinglePcItem }) {
-  // const router = useRouter(SinglePcItem);
-  // const { itemId } = router.query;
-  // console.log(SinglePcItem, "from single Pc item Data");
+  const router = useRouter(SinglePcItem);
+  const { itemId } = router.query;
   const details = SinglePcItem.data;
   return (
     <div className="mx-auto max-w-7xl">
@@ -28,7 +27,7 @@ function SinglePcItemData({ SinglePcItem }) {
               <div className="flex flex-col lg:flex-row">
                 <img
                   className="w-48 h-48 m-3 object-cover rounded "
-                  alt={details.name}
+                  alt="image"
                   src={details.img}
                 />
                 <div className="m-3  py-2 lg:py-0">
@@ -114,9 +113,7 @@ SinglePcItemData.getLayout = function getLayout(page) {
 export const getServerSideProps = async context => {
   try {
     const { singlePcItem } = context.query;
-    const response = await axios.get(
-      `http://localhost:5000/pcItems/allProducts/${singlePcItem}`,
-    );
+    const response = await axios.get(`${singlePcItemData}${singlePcItem}`);
 
     if (response.status === 200) {
       const SinglePcItemData = response.data;

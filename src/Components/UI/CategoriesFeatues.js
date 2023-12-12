@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import axios from 'axios';
+import serverlink from '@/config/config';
 import { BsFillKeyboardFill, BsFillMotherboardFill } from 'react-icons/bs';
 import { CiMicrophoneOn } from 'react-icons/ci';
 import { FaMemory } from 'react-icons/fa';
@@ -106,9 +107,7 @@ export async function getServerSideProps({ params }) {
   try {
     const categoryId = params.id;
 
-    const response = await axios.get(
-      `http://localhost:5000/pcItems/${categoryId}`,
-    );
+    const response = await axios.get(`${serverlink}pcItems/${categoryId}`);
 
     if (response.status === 200) {
       const singleCategoryData = response.data; // Renamed the variable to 'singleCategoryData'

@@ -1,6 +1,7 @@
 import IHome from '@/Components/Home/IHome';
 import Rootlayout from '@/Components/Layouts/RootLalyout';
 import axios, { all } from 'axios';
+import serverlink, { servelink } from '@/config/config';
 
 function HomePage({ data }) {
   const AllData = data.data.map(category => {
@@ -9,7 +10,6 @@ function HomePage({ data }) {
     }));
     return { name: category.name, items: items };
   });
-
   return (
     <div className="lg:px-10 px-4">
       <IHome data={data} key={data.id} singlePcItem={AllData} />
@@ -23,7 +23,8 @@ HomePage.getLayout = function getLayout(page) {
 
 export async function getServerSideProps() {
   try {
-    const response = await axios.get('http://localhost:5000/pcItems');
+    const response = await axios.get(`${servelink}/pcitems`);
+    // const response = await axios.get('https://pcm-server.vercel.app/pcItems');
     if (response.status === 200) {
       const data = response.data;
       return {

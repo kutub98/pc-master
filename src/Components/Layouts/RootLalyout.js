@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import NavBar from "../Shared/Navbar";
-import Footer from "../Shared/Footer";
-import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
+import React, { useEffect, useState } from 'react';
+import NavBar from '../Shared/Navbar';
+import Footer from '../Shared/Footer';
+import { ArrowUpCircleIcon } from '@heroicons/react/24/outline';
 
 const Rootlayout = ({ children }) => {
   const [isHidden, setIsHidden] = useState(true);
@@ -15,15 +15,14 @@ const Rootlayout = ({ children }) => {
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    // console.log("hello")
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
   return (
@@ -35,7 +34,7 @@ const Rootlayout = ({ children }) => {
       <Footer />
       <div
         className={`fixed right-2 cursor-pointer bottom-16 ${
-          isHidden ? "hidden" : ""
+          isHidden ? 'hidden' : ''
         }`}
         onClick={scrollToTop}
       >

@@ -7,10 +7,11 @@ import {
   CardFooter,
   CardHeader,
   Typography,
-} from "@material-tailwind/react";
-import Link from "next/link";
-import axios from "axios";
-import Rootlayout from "@/Components/Layouts/RootLalyout";
+} from '@material-tailwind/react';
+import Link from 'next/link';
+import axios from 'axios';
+import Rootlayout from '@/Components/Layouts/RootLalyout';
+import { servelink } from '@/config/config';
 
 function SingleCategory({ singleCategory }) {
   // console.log(singleCategory.data.items, "single Category");
@@ -97,9 +98,7 @@ export async function getServerSideProps({ params }) {
     const singleCategory = params.singleCategory;
     // console.log(singleCategory, "single category id");
 
-    const response = await axios.get(
-      `http://localhost:5000/pcItems/${singleCategory}`,
-    );
+    const response = await axios.get(`${servelink}/pcItems/${singleCategory}`);
 
     if (response.status === 200) {
       const singleCategoryData = response.data;
@@ -108,13 +107,13 @@ export async function getServerSideProps({ params }) {
       };
     } else {
       // Handle other response status codes or errors
-      console.error("Error fetching data. Status:", response.status);
+      console.error('Error fetching data. Status:', response.status);
       return {
         props: { singleCategory: null },
       };
     }
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error('Error fetching data:', error);
     return {
       props: { singleCategory: null },
     };
