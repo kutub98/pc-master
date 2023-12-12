@@ -4,8 +4,8 @@ import { Button } from '@material-tailwind/react';
 import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
-import serverlink, { singlePcItemData } from '@/config/config';
 import { useRouter } from 'next/router';
+import { ServerLink } from '@/config/config';
 function SinglePcItemData({ SinglePcItem }) {
   const router = useRouter(SinglePcItem);
   const { itemId } = router.query;
@@ -113,7 +113,7 @@ SinglePcItemData.getLayout = function getLayout(page) {
 export const getServerSideProps = async context => {
   try {
     const { singlePcItem } = context.query;
-    const response = await axios.get(`${singlePcItemData}${singlePcItem}`);
+    const response = await axios.get(`${ServerLink.singleData}${singlePcItem}`);
 
     if (response.status === 200) {
       const SinglePcItemData = response.data;

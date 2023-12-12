@@ -11,7 +11,7 @@ import {
 import Link from 'next/link';
 import axios from 'axios';
 import Rootlayout from '@/Components/Layouts/RootLalyout';
-import { servelink } from '@/config/config';
+import { ServerLink } from '@/config/config';
 
 function SingleCategory({ singleCategory }) {
   // console.log(singleCategory.data.items, "single Category");
@@ -98,7 +98,7 @@ export async function getServerSideProps({ params }) {
     const singleCategory = params.singleCategory;
     // console.log(singleCategory, "single category id");
 
-    const response = await axios.get(`${servelink}/pcItems/${singleCategory}`);
+    const response = await axios.get(`${ServerLink.FullData}/pcItems/${singleCategory}`);
 
     if (response.status === 200) {
       const singleCategoryData = response.data;
