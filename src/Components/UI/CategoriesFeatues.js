@@ -1,10 +1,10 @@
 // CategoriesFeatures.js
-import Link from "next/link";
-import React, { useState } from "react";
-import axios from "axios";
-import { BsFillKeyboardFill, BsFillMotherboardFill } from "react-icons/bs";
-import { CiMicrophoneOn } from "react-icons/ci";
-import { FaMemory } from "react-icons/fa";
+import Link from 'next/link';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { BsFillKeyboardFill, BsFillMotherboardFill } from 'react-icons/bs';
+import { CiMicrophoneOn } from 'react-icons/ci';
+import { FaMemory } from 'react-icons/fa';
 import {
   MdRestorePage,
   MdMonitor,
@@ -12,9 +12,9 @@ import {
   MdMouse,
   MdIntegrationInstructions,
   MdMonitorHeart,
-} from "react-icons/md";
+} from 'react-icons/md';
 
-import { Button } from "@material-tailwind/react";
+import { Button } from '@material-tailwind/react';
 function CategoriesFeatures({ data }) {
   const Icon = [
     {
@@ -55,8 +55,8 @@ function CategoriesFeatures({ data }) {
     },
   ];
   return (
-    <div className="bg-[#fdfdfd] w-full rounded">
-      <div className="lg:px-52 px-0 ">
+    <div className="bg-[#f3f2f2] w-full rounded container mx-auto">
+      <div className="lg:px-52 px-0  ">
         <div className="wrapper text-center">
           <svg>
             <text
@@ -73,25 +73,26 @@ function CategoriesFeatures({ data }) {
         <div className=" container mx-auto w-full max-w-7xl py-2 grid grid-col-12">
           {data.data.map((category, index) => (
             <div key={index}>
-              <div className="relative mt-2 flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div className="p-4 flex justify-between w-full">
-                  <div className="flex items-center ">
-                    <div
-                      key={index}
-                      className=" h-6 w-6 mr-3 animate-pulse text-[#32037f] "
-                    >
-                      {Icon[index].icon}
+              <div className="relative mt-2 flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:bg-cyan-400 hover:text-white  hover:rounded-xl  hover:duration-1000">
+                <Link
+                  href={`/categories/${category._id}`}
+                  className=" hover:text-white"
+                >
+                  <div className="p-4 flex justify-between w-full hover:text-white ">
+                    <div className="flex items-center hover:text-white ">
+                      <div key={index} className=" h-6 w-6 mr-3 animate-pulse">
+                        {Icon[index].icon}
+                      </div>
+
+                      <h5 className="block font-sans text-xl text-opacity-70 leading-snug tracking-normal antialiased ">
+                        {category.name}
+                      </h5>
                     </div>
-                    <h5 className="block font-sans text-xl text-opacity-70 leading-snug tracking-normal text-blue-gray-900 antialiased ">
-                      {category.name}
-                    </h5>
-                  </div>
-                  <div className="">
-                    <Link href={`/categories/${category._id}`}>
+                    <div className="">
                       <Button>Choose</Button>
-                    </Link>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           ))}
@@ -116,7 +117,7 @@ export async function getServerSideProps({ params }) {
       };
     }
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error('Error fetching data:', error);
   }
 
   // Return an empty object or any error handling you want here

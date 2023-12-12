@@ -1,17 +1,17 @@
-import IHome from "@/Components/Home/IHome";
-import Rootlayout from "@/Components/Layouts/RootLalyout";
-import axios, { all } from "axios";
+import IHome from '@/Components/Home/IHome';
+import Rootlayout from '@/Components/Layouts/RootLalyout';
+import axios, { all } from 'axios';
 
 function HomePage({ data }) {
-  const AllData = data.data.map((category) => {
-    const items = category.items.map((item) => ({
+  const AllData = data.data.map(category => {
+    const items = category.items.map(item => ({
       singlePcItem: item,
     }));
     return { name: category.name, items: items };
   });
 
   return (
-    <div className="px-14">
+    <div className="lg:px-10 px-4">
       <IHome data={data} key={data.id} singlePcItem={AllData} />
     </div>
   );
@@ -23,7 +23,7 @@ HomePage.getLayout = function getLayout(page) {
 
 export async function getServerSideProps() {
   try {
-    const response = await axios.get("http://localhost:5000/pcItems");
+    const response = await axios.get('http://localhost:5000/pcItems');
     if (response.status === 200) {
       const data = response.data;
       return {
@@ -31,7 +31,7 @@ export async function getServerSideProps() {
       };
     }
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error('Error fetching data:', error);
   }
   return {
     props: { data: null },

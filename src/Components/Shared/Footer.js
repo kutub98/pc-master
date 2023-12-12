@@ -30,7 +30,7 @@ const Footer = () => {
             <div key={key} className="w-full">
               <Typography
                 variant="small"
-                color="text-gray-700"
+               
                 className="mb-4 font-bold uppercase opacity-50"
               >
                 {title}
@@ -40,7 +40,7 @@ const Footer = () => {
                   <Typography
                     key={key}
                     as="li"
-                    color="text-gray-700"
+                   
                     className="font-normal"
                   >
                     <a

@@ -20,9 +20,9 @@ const IHome = ({ data, singlePcItem }) => {
       </div>
 
       <Features />
-      <div className="">
+      {/* <div className=""> */}
         <DownloadApp />
-      </div>
+      {/* </div> */}
       <div className="">
         <Subcripstion />
       </div>

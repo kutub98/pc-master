@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import Rootlayout from "@/Components/Layouts/RootLalyout";
-import { Button } from "@material-tailwind/react";
-import axios from "axios";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
+import Rootlayout from '@/Components/Layouts/RootLalyout';
+import { Button } from '@material-tailwind/react';
+import axios from 'axios';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
 
 function SinglePcItemData({ SinglePcItem }) {
   // const router = useRouter(SinglePcItem);
@@ -91,9 +91,11 @@ function SinglePcItemData({ SinglePcItem }) {
                 <Button className="px-5 mt-4 lg:mt-0 py-3 m-2 rounded-md bg-red-600">
                   Price: {details.price}
                 </Button>
-                <Button className="px-5 mt-4 lg:mt-0 py-3 m-2 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">
-                  Shop Now
-                </Button>
+                <Link href="/payment">
+                  <Button className="px-5 mt-4 lg:mt-0 py-3 m-2 rounded-md border block dark:bg-gray-50 dark:text-gray-900 dark:border-gray-400">
+                    Shop Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -109,7 +111,7 @@ SinglePcItemData.getLayout = function getLayout(page) {
   return <Rootlayout>{page}</Rootlayout>;
 };
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async context => {
   try {
     const { singlePcItem } = context.query;
     const response = await axios.get(
@@ -124,7 +126,7 @@ export const getServerSideProps = async (context) => {
       };
     }
   } catch (error) {
-    console.error("Failed to get data because of:", error);
+    console.error('Failed to get data because of:', error);
   }
 
   return {
