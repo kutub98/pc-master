@@ -1,5 +1,5 @@
 import ProductFeatures from '@/Components/UI/ProductFeaturs';
-import  ServerLink  from '@/config/config';
+import ServerLink from '@/config/config';
 import axios from 'axios';
 import React from 'react';
 
@@ -17,8 +17,6 @@ function ProductFeaturesIndex({ data }) {
     </div>
   );
 }
-
-
 
 export async function getServerSideProps() {
   try {

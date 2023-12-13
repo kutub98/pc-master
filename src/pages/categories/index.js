@@ -2,7 +2,7 @@ import React from 'react';
 import RootLayout from '../../Components/Layouts/RootLalyout';
 import axios from 'axios';
 import CategoriesFeatures from '@/Components/UI/CategoriesFeatues';
-import serverlink from '@/config/config'
+import serverlink from '@/config/config';
 function Categories({ data }) {
   // console.log(data , "From Categories")
   return (
@@ -11,8 +11,6 @@ function Categories({ data }) {
     </div>
   );
 }
-
-
 
 export async function getServerSideProps() {
   try {
@@ -31,7 +29,6 @@ export async function getServerSideProps() {
     props: { data: null },
   };
 }
-
 
 export default Categories;
 Categories.getLayout = function getLayout(page) {

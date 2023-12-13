@@ -1,8 +1,7 @@
 import IHome from '@/Components/Home/IHome';
 import Rootlayout from '@/Components/Layouts/RootLalyout';
-import { ServerLink, servelink } from '@/config/config';
-import axios, { all } from 'axios';
-import serverlink from '@/config/config'
+import axios from 'axios';
+import serverlink from '@/config/config';
 function HomePage({ data }) {
   const AllData = data.data.map(category => {
     const items = category.items.map(item => ({
@@ -17,11 +16,9 @@ function HomePage({ data }) {
   );
 }
 
-
 export async function getServerSideProps() {
   try {
     const response = await axios.get(`${serverlink.FullData}/pcitems`);
-    // const response = await axios.get('https://pcm-server.vercel.app/pcItems');
     if (response.status === 200) {
       const data = response.data;
       return {
