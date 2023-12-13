@@ -16,7 +16,7 @@ function HomePage({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export const getServerSideProps = async context => {
   try {
     const response = await axios.get(`${serverlink.FullData}/pcitems`);
     if (response.status === 200) {
@@ -31,11 +31,12 @@ export async function getServerSideProps() {
   return {
     props: { data: null },
   };
-}
+};
 export default HomePage;
 HomePage.getLayout = function getLayout(page) {
   return <Rootlayout>{page}</Rootlayout>;
 };
+
 // // Import Axios
 // import IHome from '@/Components/Home/IHome';
 // import Rootlayout from '@/Components/Layouts/RootLalyout';
